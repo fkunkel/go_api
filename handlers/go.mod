@@ -3,6 +3,7 @@ module github.com/fkunkel/go_api/handlers
 go 1.18
 
 require (
+	github.com/fkunkel/go_api/domain v0.0.0-20221004193818-57d1ff04ff7a
 	github.com/gorilla/mux v1.8.0
 	github.com/rs/zerolog v1.28.0
 )

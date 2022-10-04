@@ -1,6 +1,6 @@
 github.com/coreos/go-systemd/v22 v22.3.3-0.20220203105225-a9a7ef127534/go.mod h1:Y58oyj3AT4RCenI/lSvhwexgC+NSVTIJ3seZv2GcEnc=
-github.com/fkunkel/go_api/handlers v0.0.0-20221004001914-46764d6a618f h1:DEnvoqsw1CbGfDjsxq4rnaZHl9RtzgLoR/Oj2xtl9xA=
-github.com/fkunkel/go_api/handlers v0.0.0-20221004001914-46764d6a618f/go.mod h1:Q6bV+EbC5qN4b93EUJ4LdOMAuXiwFR0gqiucvrwSv7Y=
+github.com/fkunkel/go_api/domain v0.0.0-20221004193818-57d1ff04ff7a h1:l9ibTpGSCTmandIG/vfTqMk3vSejGZJmNUf8cpcwqmg=
+github.com/fkunkel/go_api/domain v0.0.0-20221004193818-57d1ff04ff7a/go.mod h1:iGSZE6/GBNUi+2+IngNfVA9hos1PPpTu3Cw6PKGIHZc=
 github.com/fkunkel/go_api/handlers v0.0.0-20221004002855-f138438fd4a3 h1:uQtrHbbXxg0mzLI0AUBzMoNLfKwmJ6jK3sjPydmA43o=
 github.com/fkunkel/go_api/handlers v0.0.0-20221004002855-f138438fd4a3/go.mod h1:Q6bV+EbC5qN4b93EUJ4LdOMAuXiwFR0gqiucvrwSv7Y=
 github.com/godbus/dbus/v5 v5.0.4/go.mod h1:xhWf0FNVPg57R7Z0UbKHbJfkEywrmjJnf7w5xrFpKfA=
