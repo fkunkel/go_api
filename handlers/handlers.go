@@ -1,9 +1,11 @@
 package handlers
 
 import (
+	"database/sql"
 	"github.com/fkunkel/go_api/domain"
 	"github.com/gorilla/mux"
 	"github.com/rs/zerolog"
+	"time"
 )
 
 type Env struct {
@@ -13,6 +15,23 @@ type Env struct {
 	}
 }
 
+func ConfigService() *Env {
+	zerolog.TimeFieldFormat = zerolog.TimeFormatUnix
+	logger := zerolog.Logger{}
+	logger.Info().Msg("Made it here")
+	db, err := sql.Open("mysql", "platformUser:Wombat2016#@/platformtest")
+	if err != nil {
+		logger.Error().Msg("Cannot make connection")
+	}
+	env := &Env{logger: &logger,companys: domain.CompanyModel{db}}
+	// See "Important settings" section.
+	db.SetConnMaxLifetime(3 * time.Minute)
+	db.SetMaxOpenConns(10)
+	db.SetMaxIdleConns(10)
+	defer db.Close()
+
+	return env
+}
 func (env *Env) Routers() *mux.Router {
 
 	r := mux.NewRouter()
@@ -22,3 +41,4 @@ func (env *Env) Routers() *mux.Router {
 
 	return r
 }
+
