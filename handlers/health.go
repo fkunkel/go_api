@@ -9,7 +9,7 @@ type statusmessage struct {
 	Status string
 }
 // home is a simple HTTP handler function which writes a response.
-func(env *Env) health(w http.ResponseWriter, _ *http.Request) {
+func health(w http.ResponseWriter, _ *http.Request) {
 	// A very simple health check.
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
