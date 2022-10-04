@@ -23,12 +23,19 @@ func ConfigService() *Env {
 	if err != nil {
 		logger.Error().Msg("Cannot make connection")
 	}
-	env := &Env{logger: &logger,companys: domain.CompanyModel{db}}
+
 	// See "Important settings" section.
 	db.SetConnMaxLifetime(3 * time.Minute)
 	db.SetMaxOpenConns(10)
 	db.SetMaxIdleConns(10)
-	defer db.Close()
+	pingErr := db.Ping()
+
+	if pingErr != nil {
+		logger.Error().Msg("ping error")
+	}
+
+	env := &Env{logger: &logger,companys: domain.CompanyModel{db}}
+	//defer db.Close()
 
 	return env
 }
