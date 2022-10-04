@@ -1,8 +1,8 @@
 github.com/coreos/go-systemd/v22 v22.3.3-0.20220203105225-a9a7ef127534/go.mod h1:Y58oyj3AT4RCenI/lSvhwexgC+NSVTIJ3seZv2GcEnc=
-github.com/fkunkel/go_api/domain v0.0.0-20221004193818-57d1ff04ff7a h1:l9ibTpGSCTmandIG/vfTqMk3vSejGZJmNUf8cpcwqmg=
-github.com/fkunkel/go_api/domain v0.0.0-20221004193818-57d1ff04ff7a/go.mod h1:iGSZE6/GBNUi+2+IngNfVA9hos1PPpTu3Cw6PKGIHZc=
-github.com/fkunkel/go_api/handlers v0.0.0-20221004002855-f138438fd4a3 h1:uQtrHbbXxg0mzLI0AUBzMoNLfKwmJ6jK3sjPydmA43o=
-github.com/fkunkel/go_api/handlers v0.0.0-20221004002855-f138438fd4a3/go.mod h1:Q6bV+EbC5qN4b93EUJ4LdOMAuXiwFR0gqiucvrwSv7Y=
+github.com/fkunkel/go_api/domain v0.0.0-20221004200425-bcba74b6e1f6 h1:sz1itugydhD7OepfbZKdf0DhtqKS+OfiPdWS8iGTBqw=
+github.com/fkunkel/go_api/domain v0.0.0-20221004200425-bcba74b6e1f6/go.mod h1:iGSZE6/GBNUi+2+IngNfVA9hos1PPpTu3Cw6PKGIHZc=
+github.com/fkunkel/go_api/handlers v0.0.0-20221004200425-bcba74b6e1f6 h1:Kml/XXs935bglUcxO5X4ZR/pmm2HNHUw1Xdp2L4zWh8=
+github.com/fkunkel/go_api/handlers v0.0.0-20221004200425-bcba74b6e1f6/go.mod h1:a1Q/YqGD3Wqqh5v+E7eMyVWyvDodZTtXI4xtSY9C9zo=
 github.com/godbus/dbus/v5 v5.0.4/go.mod h1:xhWf0FNVPg57R7Z0UbKHbJfkEywrmjJnf7w5xrFpKfA=
 github.com/gorilla/mux v1.8.0 h1:i40aqfkR1h2SlN9hojwV5ZA91wcXFOvkdNIeFDP5koI=
 github.com/gorilla/mux v1.8.0/go.mod h1:DVbg23sWSpFRCP0SfiEN6jmj59UnW/n46BH5rLB71So=

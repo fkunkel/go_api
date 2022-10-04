@@ -5,7 +5,6 @@ import (
 	"github.com/fkunkel/go_api/domain"
 	"github.com/gorilla/mux"
 	"github.com/rs/zerolog"
-	"time"
 )
 type Env struct {
 	logger *zerolog.Logger
@@ -22,12 +21,12 @@ func Routers() *mux.Router {
 	if err != nil {
 		logger.Error().Msg("Cannot make connection")
 	}
-	env := &Env{logger: &logger,companys: domain.CompanyModel{db}}
-	// See "Important settings" section.
-	db.SetConnMaxLifetime(time.Minute * 3)
-	db.SetMaxOpenConns(10)
-	db.SetMaxIdleConns(10)
 
+	// See "Important settings" section.
+	// db.SetConnMaxLifetime(3 * time.Minute)
+	// db.SetMaxOpenConns(10)
+	// db.SetMaxIdleConns(10)
+	env := &Env{logger: &logger,companys: domain.CompanyModel{db}}
 	r := mux.NewRouter()
 	r.HandleFunc("/home", home).Methods("GET")
 	r.HandleFunc("/health", health).Methods("GET")
