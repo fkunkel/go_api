@@ -1,11 +1,11 @@
 package main
 
 import (
-	"fmt"
-	"github.com/heptiolabs/healthcheck"
+	 // "github.com/heptiolabs/healthcheck"
 	"github.com/rs/zerolog"
 	"github.com/rs/zerolog/log"
 	"github.com/fkunkel/go_api/handlers"
+	"net/http"
 )
 
 func main() {
@@ -13,6 +13,7 @@ func main() {
 
 	log.Info().Msg("Starting the service...")
 
-	router := handlers.Router()
+	router := handlers.Routers()
+	log.Err(http.ListenAndServe(":8000", router))
 
 }
