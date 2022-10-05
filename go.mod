@@ -3,12 +3,12 @@ module go_api
 go 1.18
 
 require (
-	github.com/fkunkel/go_api/handlers v0.0.0-20221005003402-5537d513908c
+	github.com/fkunkel/go_api/handlers v0.0.0-20221005004035-4120e8a2515c
 	github.com/rs/zerolog v1.28.0
 )
 
 require (
-	github.com/fkunkel/go_api/domain v0.0.0-20221005003726-1cf149ed269b // indirect
+	github.com/fkunkel/go_api/domain v0.0.0-20221005004035-4120e8a2515c // indirect
 	github.com/go-sql-driver/mysql v1.6.0 // indirect
 	github.com/gorilla/mux v1.8.0 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect

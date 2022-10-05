@@ -32,7 +32,7 @@ func (m CompanyModel) All() ([]Company,error) {
 		if err != nil {
 			return nil, err
 		}
-
+		log.Info().Msg(c.id)
 		companys = append(companys, c)
 	}
 	if err = rows.Err(); err != nil {

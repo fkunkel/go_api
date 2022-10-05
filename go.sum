@@ -7,6 +7,8 @@ github.com/fkunkel/go_api/domain v0.0.0-20221005003402-5537d513908c h1:IQgxkZJla
 github.com/fkunkel/go_api/domain v0.0.0-20221005003402-5537d513908c/go.mod h1:5D9DWHUA13QBm41dxQ6wAQrzj0XTGZTL+/paHf03e08=
 github.com/fkunkel/go_api/domain v0.0.0-20221005003726-1cf149ed269b h1:m63o2l7ZrmHnXp9o1OTxNbx5l+4OvTt3YIzmX9Vwcrc=
 github.com/fkunkel/go_api/domain v0.0.0-20221005003726-1cf149ed269b/go.mod h1:5D9DWHUA13QBm41dxQ6wAQrzj0XTGZTL+/paHf03e08=
+github.com/fkunkel/go_api/domain v0.0.0-20221005004035-4120e8a2515c h1:9E2uPbgufyACYB5Fy1Y2KBYyYsttNBAI6dnaVRdnhKo=
+github.com/fkunkel/go_api/domain v0.0.0-20221005004035-4120e8a2515c/go.mod h1:5D9DWHUA13QBm41dxQ6wAQrzj0XTGZTL+/paHf03e08=
 github.com/fkunkel/go_api/handlers v0.0.0-20221004233922-f27b706232d2 h1:7JjpZd8r6LAQ3dxvzIAC2zPz0TRnI1503vSGbJHYqOU=
 github.com/fkunkel/go_api/handlers v0.0.0-20221004233922-f27b706232d2/go.mod h1:Pv42BR0nkeyRGw6w3PNNHtS6meb7CeuZZK/ARCwPYps=
 github.com/fkunkel/go_api/handlers v0.0.0-20221004235455-e9f211f0af30 h1:RcHJ4hffQhIbKhfUFWF4sLe6FAikA92xHm5DA8Hc/5I=
@@ -19,6 +21,8 @@ github.com/fkunkel/go_api/handlers v0.0.0-20221005003022-b22aaa33a2e2 h1:jSddPdC
 github.com/fkunkel/go_api/handlers v0.0.0-20221005003022-b22aaa33a2e2/go.mod h1:JFsTZfjgivxUTQyI98HdxuPklZfchN0kPosRtsjbqrc=
 github.com/fkunkel/go_api/handlers v0.0.0-20221005003402-5537d513908c h1:jk4sKlL1fl1J5gICcX9HiG4q4D2OVchBoTwKQWPQrMc=
 github.com/fkunkel/go_api/handlers v0.0.0-20221005003402-5537d513908c/go.mod h1:JFsTZfjgivxUTQyI98HdxuPklZfchN0kPosRtsjbqrc=
+github.com/fkunkel/go_api/handlers v0.0.0-20221005004035-4120e8a2515c h1:4eRaIgbKu2cdHrWNoTVVTp68Lu0eFzeGP4B7mS/n7ng=
+github.com/fkunkel/go_api/handlers v0.0.0-20221005004035-4120e8a2515c/go.mod h1:asEU10IyAfJnCwhh5snMdHlkqmTo+K9+tKzjdRXqcCk=
 github.com/go-sql-driver/mysql v1.6.0 h1:BCTh4TKNUYmOmMUcQ3IipzF5prigylS7XXjEkfCHuOE=
 github.com/go-sql-driver/mysql v1.6.0/go.mod h1:DCzpHaOWr8IXmIStZouvnhqoel9Qv2LBy8hT2VhHyBg=
 github.com/godbus/dbus/v5 v5.0.4/go.mod h1:xhWf0FNVPg57R7Z0UbKHbJfkEywrmjJnf7w5xrFpKfA=
