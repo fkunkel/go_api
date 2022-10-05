@@ -5,7 +5,7 @@ WORKDIR /go/src/github.com/fkunkel/go_api/
 COPY main.go ./
 COPY go.mod ./
 RUN echo $(ls -l /go/src/github.com/fkunkel/go_api/)
-RUN go get -d -v github.com/fkunkel/go_api/handlers
+
 RUN go mod tidy
 RUN go build -o app .
 
@@ -13,6 +13,6 @@ FROM alpine:latest
 RUN apk --no-cache add ca-certificates
 WORKDIR /root
 COPY --from=builder /go/src/github.com/fkunkel/go_api/app ./
-COPY go_api ./
+
 EXPOSE 8000
 CMD ["./app"]

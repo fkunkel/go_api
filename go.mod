@@ -8,7 +8,7 @@ require (
 )
 
 require (
-	github.com/fkunkel/go_api/domain v0.0.0-20221005110909-f983a900444a // indirect
+	github.com/fkunkel/go_api/domain v0.0.0-20221005111414-354342068d47 // indirect
 	github.com/go-sql-driver/mysql v1.6.0 // indirect
 	github.com/gorilla/mux v1.8.0 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect
