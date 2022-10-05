@@ -2,14 +2,11 @@ package handlers
 
 import (
 	"database/sql"
-	"encoding/json"
-	"github.com/rs/zerolog/log"
-	"os"
-
 	"github.com/fkunkel/go_api/domain"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/gorilla/mux"
 	"github.com/rs/zerolog"
+	"github.com/rs/zerolog/log"
 	"time"
 )
 
@@ -26,17 +23,12 @@ type Config struct {
 	ServerAddress string `json:"SERVER_ADDRESS"`
 }
 
-func ConfigService(configFile string) (*Env,error) {
-	c := Config{}
-	file, err := os.Open(configFile)
-	if err != nil {  return nil, err }
-	decoder := json.NewDecoder(file)
-	err = decoder.Decode(&c)
-	if err != nil {  return nil, err }
-	db, dbErr := c.dbService()
-	if dbErr != nil {  return nil, err }
+func(c *Config) ConfigService() (*Env,error) {
 
-	env := &Env{DB:db, companys: domain.CompanyModel{db}}
+	db, dbErr := c.dbService()
+	if dbErr != nil {  return nil, dbErr }
+
+	env := &Env{DB:db, companys: domain.CompanyModel{DB: db}}
 	//defer db.Close()
 
 	return env, nil
