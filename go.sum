@@ -1,8 +1,12 @@
 github.com/coreos/go-systemd/v22 v22.3.3-0.20220203105225-a9a7ef127534/go.mod h1:Y58oyj3AT4RCenI/lSvhwexgC+NSVTIJ3seZv2GcEnc=
 github.com/fkunkel/go_api/domain v0.0.0-20221005131552-aa055c230c59 h1:1NOFnyp5XsVTuIkWp/dqSgnS2uTOJExvVRc/T3TvniM=
 github.com/fkunkel/go_api/domain v0.0.0-20221005131552-aa055c230c59/go.mod h1:iGSZE6/GBNUi+2+IngNfVA9hos1PPpTu3Cw6PKGIHZc=
+github.com/fkunkel/go_api/domain v0.0.0-20221005132229-32a834bb4b31 h1:WfQd6XId3hA6FW2NaU+3e98121Ch1D9CSzKgkvK/iMg=
+github.com/fkunkel/go_api/domain v0.0.0-20221005132229-32a834bb4b31/go.mod h1:iGSZE6/GBNUi+2+IngNfVA9hos1PPpTu3Cw6PKGIHZc=
 github.com/fkunkel/go_api/handlers v0.0.0-20221005131552-aa055c230c59 h1:VnbHVZdZlL5AEB6UfARVGYzSnidw3kAl6RAULLmHA0A=
 github.com/fkunkel/go_api/handlers v0.0.0-20221005131552-aa055c230c59/go.mod h1:5UR1yO+wviYFOi+X1IP1dPM0OlEtICJbGRTKN9bbl9c=
+github.com/fkunkel/go_api/handlers v0.0.0-20221005132229-32a834bb4b31 h1:4BpfrZAxYw3jiPUii0gpPcxcSbjWZXpBmxgHvJw21Yc=
+github.com/fkunkel/go_api/handlers v0.0.0-20221005132229-32a834bb4b31/go.mod h1:qVrdUGKOGAAy1avtEXhN7BOiUPdNA7lhgwgzW9uDX74=
 github.com/go-sql-driver/mysql v1.6.0 h1:BCTh4TKNUYmOmMUcQ3IipzF5prigylS7XXjEkfCHuOE=
 github.com/go-sql-driver/mysql v1.6.0/go.mod h1:DCzpHaOWr8IXmIStZouvnhqoel9Qv2LBy8hT2VhHyBg=
 github.com/godbus/dbus/v5 v5.0.4/go.mod h1:xhWf0FNVPg57R7Z0UbKHbJfkEywrmjJnf7w5xrFpKfA=

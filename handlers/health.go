@@ -22,9 +22,9 @@ func (env *Env) health(w http.ResponseWriter, _ *http.Request) {
 	if pingErr != nil {
 		log.Error().Msg("ping error")
 		s.Status = "DOWN"
-
+		w.WriteHeader(http.StatusServiceUnavailable)
 	}
-	s.Status = "DOWN"
+
 	resp, err := json.Marshal(s)
 	if err != nil {
 		log.Error().Err(err).Msg("Unable to Process json")
