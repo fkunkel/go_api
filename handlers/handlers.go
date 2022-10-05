@@ -2,6 +2,7 @@ package handlers
 
 import (
 	"database/sql"
+	"github.com/rs/zerolog/log"
 
 	"github.com/fkunkel/go_api/domain"
 	_ "github.com/go-sql-driver/mysql"
@@ -11,19 +12,19 @@ import (
 )
 
 type Env struct {
-	logger   *zerolog.Logger
 	companys interface {
 		All() ([]domain.Company, error)
 	}
 }
 
-func ConfigService() *Env {
+func ConfigService() (*Env,error) {
 	zerolog.TimeFieldFormat = zerolog.TimeFormatUnix
-	logger := zerolog.Logger{}
-	logger.Info().Msg("Made it here")
+
+	log.Info().Msg("Made it")
 	db, err := sql.Open("mysql", "platformUser:Wombat2016#@/platformtest")
 	if err != nil {
-		logger.Error().Msg("Cannot make connection")
+		log.Error().Msg("Cannot make connection")
+		return nil, err
 	}
 
 	// See "Important settings" section.
@@ -33,13 +34,14 @@ func ConfigService() *Env {
 	pingErr := db.Ping()
 
 	if pingErr != nil {
-		logger.Error().Msg("ping error")
+		log.Error().Msg("ping error")
+		return nil, pingErr
 	}
 
-	env := &Env{logger: &logger,companys: domain.CompanyModel{db}}
+	env := &Env{companys: domain.CompanyModel{db}}
 	//defer db.Close()
 
-	return env
+	return env, nil
 }
 func (env *Env) Routers() *mux.Router {
 
@@ -50,4 +52,3 @@ func (env *Env) Routers() *mux.Router {
 
 	return r
 }
-

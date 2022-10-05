@@ -3,6 +3,7 @@ package domain
 import (
 	"database/sql"
 	"time"
+	"github.com/rs/zerolog/log"
 )
 
 type Company struct {
@@ -37,6 +38,6 @@ func (m CompanyModel) All() ([]Company,error) {
 	if err = rows.Err(); err != nil {
 		return nil, err
 	}
-
+	log.Info().Msg(string(len(companys)))
 	return companys, nil
 }
