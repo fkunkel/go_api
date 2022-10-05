@@ -2,7 +2,9 @@ package handlers
 
 import (
 	"database/sql"
+
 	"github.com/fkunkel/go_api/domain"
+	_ "github.com/go-sql-driver/mysql"
 	"github.com/gorilla/mux"
 	"github.com/rs/zerolog"
 	"time"
