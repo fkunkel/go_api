@@ -1,6 +1,6 @@
 github.com/coreos/go-systemd/v22 v22.3.3-0.20220203105225-a9a7ef127534/go.mod h1:Y58oyj3AT4RCenI/lSvhwexgC+NSVTIJ3seZv2GcEnc=
-github.com/fkunkel/go_api/domain v0.0.0-20221005131552-aa055c230c59 h1:1NOFnyp5XsVTuIkWp/dqSgnS2uTOJExvVRc/T3TvniM=
-github.com/fkunkel/go_api/domain v0.0.0-20221005131552-aa055c230c59/go.mod h1:iGSZE6/GBNUi+2+IngNfVA9hos1PPpTu3Cw6PKGIHZc=
+github.com/fkunkel/go_api/domain v0.0.0-20221005140725-68e39cceddf4 h1:8N82N/IXLewP07I/KghjGU8Xjkfg65iMOf4+EL716tE=
+github.com/fkunkel/go_api/domain v0.0.0-20221005140725-68e39cceddf4/go.mod h1:iGSZE6/GBNUi+2+IngNfVA9hos1PPpTu3Cw6PKGIHZc=
 github.com/go-sql-driver/mysql v1.6.0 h1:BCTh4TKNUYmOmMUcQ3IipzF5prigylS7XXjEkfCHuOE=
 github.com/go-sql-driver/mysql v1.6.0/go.mod h1:DCzpHaOWr8IXmIStZouvnhqoel9Qv2LBy8hT2VhHyBg=
 github.com/godbus/dbus/v5 v5.0.4/go.mod h1:xhWf0FNVPg57R7Z0UbKHbJfkEywrmjJnf7w5xrFpKfA=

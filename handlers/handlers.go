@@ -2,7 +2,9 @@ package handlers
 
 import (
 	"database/sql"
+	"encoding/json"
 	"github.com/rs/zerolog/log"
+	"os"
 
 	"github.com/fkunkel/go_api/domain"
 	_ "github.com/go-sql-driver/mysql"
@@ -18,21 +20,21 @@ type Env struct {
 	}
 }
 
-func ConfigService() (*Env,error) {
-	zerolog.TimeFieldFormat = zerolog.TimeFormatUnix
+type Config struct {
+	DBDriver      string `json:"DB_DRIVER"`
+	DBSource      string `json:"DB_SOURCE"`
+	ServerAddress string `json:"SERVER_ADDRESS"`
+}
 
-	log.Info().Msg("Made it")
-	db, err := sql.Open("mysql", "platformUser:Wombat2016#@/platformtest?parseTime=true")
-	if err != nil {
-		log.Error().Msg("Cannot make connection")
-		return nil, err
-	}
-
-	// See "Important settings" section.
-	db.SetConnMaxLifetime(3 * time.Minute)
-	db.SetMaxOpenConns(10)
-	db.SetMaxIdleConns(10)
-
+func ConfigService(configFile string) (*Env,error) {
+	c := Config{}
+	file, err := os.Open(configFile)
+	if err != nil {  return nil, err }
+	decoder := json.NewDecoder(file)
+	err = decoder.Decode(&c)
+	if err != nil {  return nil, err }
+	db, dbErr := c.dbService()
+	if dbErr != nil {  return nil, err }
 
 	env := &Env{DB:db, companys: domain.CompanyModel{db}}
 	//defer db.Close()
@@ -47,4 +49,21 @@ func (env *Env) Routers() *mux.Router {
 	r.HandleFunc("/company", env.companyAll).Methods("GET")
 
 	return r
+}
+
+func(c *Config) dbService() (*sql.DB, error){
+	zerolog.TimeFieldFormat = zerolog.TimeFormatUnix
+
+	log.Info().Msg("Made it")
+	db, err := sql.Open(c.DBDriver,c.DBSource )
+	if err != nil {
+		log.Error().Msg("Cannot make connection")
+		return nil, err
+	}
+
+	// See "Important settings" section.
+	db.SetConnMaxLifetime(3 * time.Minute)
+	db.SetMaxOpenConns(10)
+	db.SetMaxIdleConns(10)
+	return db, err
 }
