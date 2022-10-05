@@ -38,6 +38,6 @@ func (m CompanyModel) All() ([]Company,error) {
 	if err = rows.Err(); err != nil {
 		return nil, err
 	}
-}
+
 	return companys, nil
 }
