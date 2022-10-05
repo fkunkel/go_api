@@ -35,7 +35,7 @@ func ConfigService() (*Env,error) {
 
 
 	env := &Env{DB:db, companys: domain.CompanyModel{db}}
-	defer db.Close()
+	//defer db.Close()
 
 	return env, nil
 }

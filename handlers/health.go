@@ -7,7 +7,7 @@ import (
 )
 
 type statusmessage struct {
-	status string
+	Status string
 }
 
 // home is a simple HTTP handler function which writes a response.
@@ -15,16 +15,16 @@ func (env *Env) health(w http.ResponseWriter, _ *http.Request) {
 	// A very simple health check.
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
-	s := statusmessage{status: "UP"}
+	s := statusmessage{Status: "UP"}
 
 	pingErr := env.DB.Ping()
 
 	if pingErr != nil {
 		log.Error().Msg("ping error")
-		s.status = "DOWN"
+		s.Status = "DOWN"
 
 	}
-	s.status = "DOWN"
+	s.Status = "DOWN"
 	resp, err := json.Marshal(s)
 	if err != nil {
 		log.Error().Err(err).Msg("Unable to Process json")
