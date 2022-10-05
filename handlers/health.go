@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-type statusmessage struct {
+type statusMessage struct {
 	Status string
 }
 
@@ -14,24 +14,26 @@ type statusmessage struct {
 func (env *Env) health(w http.ResponseWriter, _ *http.Request) {
 	// A very simple health check.
 	w.Header().Set("Content-Type", "application/json")
-	w.WriteHeader(http.StatusOK)
-	s := statusmessage{Status: "UP"}
+
+	statusUp := "UP"
+	httpStatus := http.StatusOK
 
 	pingErr := env.DB.Ping()
 
 	if pingErr != nil {
 		log.Error().Msg("ping error")
-		s.Status = "DOWN"
-		w.WriteHeader(http.StatusServiceUnavailable)
+		statusUp = "DOWN"
+		httpStatus = http.StatusServiceUnavailable
 	}
 
-	resp, err := json.Marshal(s)
+	resp, err := json.Marshal(statusMessage{Status: statusUp})
+	w.WriteHeader(httpStatus)
 	if err != nil {
 		log.Error().Err(err).Msg("Unable to Process json")
 	}
 	_, respErr := w.Write(resp)
 	if respErr != nil {
-		log.Error().Err(respErr).Msg("Couldn't write to the respone")
+		log.Error().Err(respErr).Msg("Couldn't write to the response")
 		return
 	}
 }
