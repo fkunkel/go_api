@@ -21,7 +21,7 @@ func ConfigService() (*Env,error) {
 	zerolog.TimeFieldFormat = zerolog.TimeFormatUnix
 
 	log.Info().Msg("Made it")
-	db, err := sql.Open("mysql", "platformUser:Wombat2016#@/platformtest")
+	db, err := sql.Open("mysql", "platformUser:Wombat2016#@/platformtest?parseTime=true")
 	if err != nil {
 		log.Error().Msg("Cannot make connection")
 		return nil, err

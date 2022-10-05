@@ -5,6 +5,8 @@ github.com/fkunkel/go_api/domain v0.0.0-20221005002409-dd928eedd317 h1:a9ZoX7uvR
 github.com/fkunkel/go_api/domain v0.0.0-20221005002409-dd928eedd317/go.mod h1:5D9DWHUA13QBm41dxQ6wAQrzj0XTGZTL+/paHf03e08=
 github.com/fkunkel/go_api/domain v0.0.0-20221005003402-5537d513908c h1:IQgxkZJla7DV3siG7p0aaqsCA9VI1WWhvyfAGkM5wig=
 github.com/fkunkel/go_api/domain v0.0.0-20221005003402-5537d513908c/go.mod h1:5D9DWHUA13QBm41dxQ6wAQrzj0XTGZTL+/paHf03e08=
+github.com/fkunkel/go_api/domain v0.0.0-20221005003726-1cf149ed269b h1:m63o2l7ZrmHnXp9o1OTxNbx5l+4OvTt3YIzmX9Vwcrc=
+github.com/fkunkel/go_api/domain v0.0.0-20221005003726-1cf149ed269b/go.mod h1:5D9DWHUA13QBm41dxQ6wAQrzj0XTGZTL+/paHf03e08=
 github.com/fkunkel/go_api/handlers v0.0.0-20221004233922-f27b706232d2 h1:7JjpZd8r6LAQ3dxvzIAC2zPz0TRnI1503vSGbJHYqOU=
 github.com/fkunkel/go_api/handlers v0.0.0-20221004233922-f27b706232d2/go.mod h1:Pv42BR0nkeyRGw6w3PNNHtS6meb7CeuZZK/ARCwPYps=
 github.com/fkunkel/go_api/handlers v0.0.0-20221004235455-e9f211f0af30 h1:RcHJ4hffQhIbKhfUFWF4sLe6FAikA92xHm5DA8Hc/5I=
