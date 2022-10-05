@@ -5,6 +5,8 @@ github.com/fkunkel/go_api/domain v0.0.0-20221005003402-5537d513908c h1:IQgxkZJla
 github.com/fkunkel/go_api/domain v0.0.0-20221005003402-5537d513908c/go.mod h1:5D9DWHUA13QBm41dxQ6wAQrzj0XTGZTL+/paHf03e08=
 github.com/fkunkel/go_api/domain v0.0.0-20221005003726-1cf149ed269b h1:m63o2l7ZrmHnXp9o1OTxNbx5l+4OvTt3YIzmX9Vwcrc=
 github.com/fkunkel/go_api/domain v0.0.0-20221005003726-1cf149ed269b/go.mod h1:5D9DWHUA13QBm41dxQ6wAQrzj0XTGZTL+/paHf03e08=
+github.com/fkunkel/go_api/domain v0.0.0-20221005004626-1f81a60a8558 h1:7ElFPF+aqfkRZ5nO1kQxPtXeBiaj5g48yFxZ49JMD6o=
+github.com/fkunkel/go_api/domain v0.0.0-20221005004626-1f81a60a8558/go.mod h1:5D9DWHUA13QBm41dxQ6wAQrzj0XTGZTL+/paHf03e08=
 github.com/go-sql-driver/mysql v1.6.0 h1:BCTh4TKNUYmOmMUcQ3IipzF5prigylS7XXjEkfCHuOE=
 github.com/go-sql-driver/mysql v1.6.0/go.mod h1:DCzpHaOWr8IXmIStZouvnhqoel9Qv2LBy8hT2VhHyBg=
 github.com/godbus/dbus/v5 v5.0.4/go.mod h1:xhWf0FNVPg57R7Z0UbKHbJfkEywrmjJnf7w5xrFpKfA=

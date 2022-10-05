@@ -3,7 +3,7 @@ module github.com/fkunkel/go_api/handlers
 go 1.18
 
 require (
-	github.com/fkunkel/go_api/domain v0.0.0-20221005003726-1cf149ed269b
+	github.com/fkunkel/go_api/domain v0.0.0-20221005004626-1f81a60a8558
 	github.com/go-sql-driver/mysql v1.6.0
 	github.com/gorilla/mux v1.8.0
 	github.com/rs/zerolog v1.28.0

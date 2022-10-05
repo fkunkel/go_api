@@ -9,9 +9,15 @@ import (
 // company is a simple HTTP handler function which writes a response.
 func (env *Env) companyAll(w http.ResponseWriter, _ *http.Request) {
 	companys,err := env.companys.All()
+
+	for _, co := range companys {
+		log.Info().Msg(co.Name)
+	}
+
 	if err != nil {
 		log.Error().Err(err).Msg("Couldn't get companies")
 	}
+
 	resp, jsonErr :=json.Marshal(companys)
 	if jsonErr != nil {
 		log.Error().Err(jsonErr).Msg("Unable to Process json")

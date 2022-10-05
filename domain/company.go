@@ -7,9 +7,9 @@ import (
 )
 
 type Company struct {
-	id string
-	name string
-	created time.Time
+	Id string
+	Name string
+	Created time.Time
 }
 
 type CompanyModel struct {
@@ -17,7 +17,7 @@ type CompanyModel struct {
 }
 
 func (m CompanyModel) All() ([]Company,error) {
-	rows, err := m.DB.Query("SELECT id,name,created FROM Companys")
+	rows, err := m.DB.Query("select id,name,created from Companys")
 	if err != nil {
 		return nil, err
 	}
@@ -28,16 +28,16 @@ func (m CompanyModel) All() ([]Company,error) {
 	for rows.Next() {
 		var c Company
 
-		err := rows.Scan(&c.id, &c.name, &c.created)
+		err := rows.Scan(&c.Id, &c.Name, &c.Created)
 		if err != nil {
 			return nil, err
 		}
-		log.Info().Msg(c.id)
+		// log.Info().Msg(c.id)
 		companys = append(companys, c)
 	}
 	if err = rows.Err(); err != nil {
 		return nil, err
 	}
-	log.Info().Msg(string(len(companys)))
+}
 	return companys, nil
 }
