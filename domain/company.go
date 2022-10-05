@@ -17,7 +17,7 @@ type CompanyModel struct {
 }
 
 func (m CompanyModel) All() ([]Company,error) {
-	rows, err := m.DB.Query("SELECT * FROM Companys")
+	rows, err := m.DB.Query("SELECT id,name,created FROM Companys")
 	if err != nil {
 		return nil, err
 	}

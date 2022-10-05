@@ -7,7 +7,10 @@ import (
 )
 
 func main() {
-	env := handlers.ConfigService()
+	env,err := handlers.ConfigService()
+	if err != nil {
+		log.Error().Err(err).Msg("error in config")
+	}
 	router := env.Routers()
 	log.Err(http.ListenAndServe(":8000", router))
 

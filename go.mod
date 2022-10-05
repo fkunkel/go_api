@@ -3,7 +3,7 @@ module go_api
 go 1.18
 
 require (
-	github.com/fkunkel/go_api/handlers v0.0.0-20221005002409-dd928eedd317
+	github.com/fkunkel/go_api/handlers v0.0.0-20221005003022-b22aaa33a2e2
 	github.com/rs/zerolog v1.28.0
 )
 
