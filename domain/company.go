@@ -3,12 +3,11 @@ package domain
 import (
 	"database/sql"
 	"time"
-	"github.com/rs/zerolog/log"
 )
 
 type Company struct {
-	Id string
-	Name string
+	Id      string
+	Name    string
 	Created time.Time
 }
 
@@ -16,7 +15,7 @@ type CompanyModel struct {
 	DB *sql.DB
 }
 
-func (m CompanyModel) All() ([]Company,error) {
+func (m CompanyModel) All() ([]Company, error) {
 	rows, err := m.DB.Query("select id,name,created from Companys")
 	if err != nil {
 		return nil, err
