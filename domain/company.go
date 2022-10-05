@@ -9,7 +9,7 @@ import (
 type Company struct {
 	id string
 	name string
-	created time.Duration
+	created time.Time
 }
 
 type CompanyModel struct {
