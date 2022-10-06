@@ -10,10 +10,6 @@ import (
 func (env *Env) companyAll(w http.ResponseWriter, _ *http.Request) {
 	companys,err := env.companys.All()
 
-	for _, co := range companys {
-		log.Info().Msg(co.Name)
-	}
-
 	if err != nil {
 		log.Error().Err(err).Msg("Couldn't get companies")
 	}

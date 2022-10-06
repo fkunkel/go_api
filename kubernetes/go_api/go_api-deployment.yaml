@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: go_api
+spec:
+  selector:
+    matchLabels:
+      app: go_api
+  template:
+    metadata:
+      labels:
+        app: go_api
+    spec:
+      containers:
+        - image: fkunkel/go_api:latest
+          name: go_api
+          ports:
+            - containerPort: 8080
+              name: go_api

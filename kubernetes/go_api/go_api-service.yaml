@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: go_api
+spec:
+  ports:
+    - port: 8080
+  selector:
+    app: go_api

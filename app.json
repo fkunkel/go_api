@@ -1,3 +1,8 @@
-DB_DRIVER=mysql
-DB_SOURCE=platformUser:Wombat2016#@tcp(127.0.0.1:3306)/platformtest?parseTime=true
-SERVER_ADDRESS=:8000
+{
+  "DB_DRIVER": "mysql",
+  "DB_SOURCE": "go_user:password#@tcp(mysql:3306)/go_api?parseTime=true",
+  "SERVER_ADDRESS":  ":8080"
+
+}
+
+
